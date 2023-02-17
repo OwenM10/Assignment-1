@@ -1,8 +1,10 @@
+
 .tab {
   overflow: hidden;
-  border: 1px solid rgb(170, 238, 130);
-  background-color: #67c974;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
 }
+
 
 .tab button {
   background-color: inherit;
@@ -14,13 +16,16 @@
   transition: 0.3s;
 }
 
+
 .tab button:hover {
-  background-color: rgb(238, 138, 138);
+  background-color: #ddd;
 }
+
 
 .tab button.active {
   background-color: rgb(100, 128, 180);
 }
+
 
 .tabcontent {
   display: none;
@@ -29,97 +34,158 @@
   border-top: none;
 }
 
+
 /*Below is notification slider
 /* The switch - the box around the slider */
 .switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
+position: relative;
+display: inline-block;
+width: 60px;
+height: 34px;
 }
 
 /* Hide default HTML checkbox */
 .switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
+opacity: 0;
+width: 0;
+height: 0;
 }
 
 /* The slider */
 .slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #ccc;
+-webkit-transition: .4s;
+transition: .4s;
 }
 
 .slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+position: absolute;
+content: "";
+height: 26px;
+width: 26px;
+left: 4px;
+bottom: 4px;
+background-color: white;
+-webkit-transition: .4s;
+transition: .4s;
 }
 
 input:checked + .slider {
-  background-color: #2196f3;
+background-color: #2196F3;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196f3;
+box-shadow: 0 0 1px #2196F3;
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+-webkit-transform: translateX(26px);
+-ms-transform: translateX(26px);
+transform: translateX(26px);
 }
 
 /* Rounded sliders */
 .slider.round {
-  border-radius: 34px;
+border-radius: 34px;
 }
 
 .slider.round:before {
-  border-radius: 50%;
+border-radius: 50%;
 }
 
 
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  text-align: center;
-  background-color: red;
+
+/* flex box */
+.FlexContainer {
+display: flex;
+flex-wrap: nowrap;
+justify-content: center;
+align-items: flex-start;
+align-content: flex-start;
+width: 100%;
+background-color: #616064;
+height: 80vh;
+overflow: auto;
+flex-direction: row;
 }
+
+.FlexContainer div {
+width:50%;
+height: 100px;
+margin: 22px;
+
+}
+
+input[type=text] {
+flex: 33%;
+width: 50%;
+padding: 12px 20px;
+margin: 8px 0;
+box-sizing: border-box;
+} */
+
 
 .header {
-  text-align: center;
-  padding: 32px;
+text-decoration-color: #4CAF50;
+text-align: center;
+padding: 32px;
 }
 
-.column {
-  flex: 33%;
-  max-width: 33%;
-  padding: 0 4px;
-  border: 5px;
-  background-color: antiquewhite;
+/* Style the labels */
+label {
+display: block;
+margin-bottom: 0.5rem;
+font-weight: bold;
 }
 
-.row {
-  flex: 33%;
-  max-width: 33%;
-  padding: 0 4px;
-  border: 5px;
-  background-color: forestgreen;
+/* Style the form fields */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="password"] {
+display: block;
+width: 100%;
+padding: 0.5rem;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+margin-bottom: 1rem;
+}
+
+/* Style the submit button */
+input[type="submit"] {
+background-color: #4CAF50;
+color: #fff;
+padding: 0.5rem 1rem;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+}
+
+/* Style the error messages */
+.error {
+color: red;
+margin-top: 0.5rem;
 }
 
 
+
+.pfp {
+
+width: 100px;
+height: 100px;
+border-radius: 50%;
+margin-left: 40%;
+margin-right: 40%;
+}
+
+
+.pageBackground {
+background-image: url("https://img.freepik.com/free-vector/abstract-blue-geometric-shapes-background_1035-17545.jpg");
+}

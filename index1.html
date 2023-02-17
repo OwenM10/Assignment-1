@@ -2,9 +2,10 @@
 <html>
 <head>
   <title>My Website</title>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+  
   <div class="header">
     <h1>Owens Router Thing</h1>
     <p>This shit is stupid</p>
@@ -16,45 +17,81 @@
       
       
       <div id="Dashboard" class="tabcontent">
-        <div class="column">
+        <div class="FlexContainer">
+          <div>
+            <h3>Dashboard</h3>
+            <div id='time'></div>
 
-        </div>
-        <div class="column">
-          <h3>Dashboard</h3>
-          <div id='time'></div>
-        </div>
-        <div class="column">
-          
-        </div>
-        
+            <label for="device-name Name">Device Name:</label>
+            <input type="text" id="device-name" name="device-name" required>
 
-        
-        <p>Notifications</p>
-        <label class="switch">
+            <p>Notifications</p>
+            <label class="switch">
             <input type="checkbox">
             <span class="slider"></span>
-          </label>
+            </label>
 
+
+
+            <h3>Lighting Mode</h3>
+            <label>
+              <input type="checkbox" class="radio" value="1" name="fooby[1][]" />Off</label>
+            <label>
+              <input type="checkbox" class="radio" value="1" name="fooby[1][]" />Away</label>
+            <label>
+              <input type="checkbox" class="radio" value="1" name="fooby[1][]" />Eco</label>
+            <label>
+              <input type="checkbox" class="radio" value="1" name="fooby[1][]" />Full</label>
+            
+            <label for="temperature">Temperature:</label>
+            <input type="number" id="temperature" name="temperature" min="10" max="25" step="0.5" value="10">
+            <button type="button" onclick="increaseTemp()">+</button>
+            <button type="button" onclick="decreaseTemp()">-</button>
+              
+
+
+          </div>
+
+          
+
+        </div>
+       
+
+        
+        
       </div>
       
       <div id="Profile" class="tabcontent">
-        <div class="column">
-          <h3>Profile</h3>
-          <p>This is the profile page</p>
+        <div class='FlexContainer'>
+          
+              <div>
+                <img src="PFP.png" alt="Profile pic" class="pfp">
+
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first-name" required>
+              
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last-name" required>
+              
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+              
+                <label for="birthday">Birthday:</label>
+                <input type="date" id="birthday" name="birthday" required>
+              
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+              
+                <label for="password-confirm">Confirm Password:</label>
+                <input type="password" id="password-confirm" name="password-confirm" required>
+              
+                <input type="submit" value="Submit">
+              </div>
+          
         </div>
-        <div class="column">
-          <h3>Profile</h3>
-          <p>This is the profile page</p>
-        </div>
-        <div class="column">
-          <h3>Profile</h3>
-          <p>This is the profile page</p>
-        </div>
-        
       </div>
-    
-    
-    
-  <script src="js/script.js"></script>
+      
+
+  <script src="script.js"></script>
 </body>
 </html>
