@@ -11,5 +11,5 @@ app.listen(PORT, ()=>{
 })
 
 app.get("/", (req,res) =>{
-    res.sendFile(path.resolve(__dirname,"index.html"));
+    res.sendFile(path.resolve(__dirname,"untitled-1.html"));
 });
